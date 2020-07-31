@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+
+
+{% block content %}
+<div class="quiz" name="quiz">
+
+	
+	<center>
+		<h1> General Knowledge Quiz begins</h1>
+	</center>
+		{% for res in object %}
+			<table>
+				<tr>
+					<td>{{res.id}} ) {{res.theory}} </td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="{{res.id}}" class="ch" id="Option1" value="{{res.option1}}"/> {{res.option1}}</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="{{res.id}}" class="ch" id="Option2" value="{{res.option2}}"/> {{res.option2}}</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="{{res.id}}" class="ch" id="Option3" value="{{res.option3}}"/> {{res.option3}}</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="{{res.id}}" class="ch" id="Option4" value="{{res.option4}}"/> {{res.option4}}</td>
+				</tr>
+				<tr>
+					<td><label id="correctAns" class="ch" style="display: none"><b>{{res.correctAns}}</b></label></td>
+				</tr>
+				<hr/>
+			</table>
+		{% endfor %}
+		
+		<div id="submit_answers">
+	      <button type="button" name="button" id="sub_btn">Submit</button>
+	    </div>
+		<hr/>
+		<b id="Result"> </b>
+
+		<script type="text/javascript" src="script.js"></script>
+	
+</div>
+{% endblock %}

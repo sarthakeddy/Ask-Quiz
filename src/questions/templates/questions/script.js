@@ -1,12 +1,12 @@
-let submit = document.getElementById("submit_answers");
+let submit = document.getElementById("sub_btn");
 submit.addEventListener("click", getScore);
 
-$(document).ready(function() {
-	$("sub_btn").click(function() {
-		$(".ch").show();
-		$(".ch").attr("disabled", true);
-	});
-});
+// $(document).ready(function() {
+// 	$("sub_btn").click(function() {
+// 		$(".ch").show();
+// 		$(".ch").attr("disabled", true);
+// 	});
+// });
 
 function getScore() {
 	console.log("Enter");

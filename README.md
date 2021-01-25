@@ -10,21 +10,21 @@ This web app is built using Django and sqlite3 database.
 # Installation
 
 ### Running locally
-Follow given steps :-
+Follow given steps.
     1. Clone or Download the repository.
         <pre>git clone https://github.com/sarthakeddy/Ask-Quiz.git
         cd Ask-Quiz/src</pre>
     2. Create a super user to add or remove questions from database.
         <pre>python3 manage.py createsuperuser</pre>
         Enter your name, email and password.
-    3. Start the server
+    3. Start the server. Follow the given link to access website.
         <pre>python3 manage.py runserver</pre>
-        Follow the given link to access website.
-    4. Access quiz at http://127.0.0.1:8000/quiz/
-    5. Access admin page at http://127.0.0.1:8000/admin 
+    4. Access quiz at <pre>http://127.0.0.1:8000/quiz/</pre>
+    5. Access admin page at <pre>http://127.0.0.1:8000/admin</pre>
 
 ## Screenshots
 ![Starting Page](img/screen.png "First")
+![Submit Page](img/ans.png "Second")
 
 ## Get in touch
 [<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/sarthakeddy/)

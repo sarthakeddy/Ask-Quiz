@@ -26,7 +26,7 @@
 					<td><input type="radio" name="{{res.id}}" class="ch" id="Option4" value="{{res.option4}}"/> {{res.option4}}</td>
 				</tr>
 				<tr>
-					<td><label id="correctAns" class="ch" style="display: none"><b>{{res.correctAns}}</b></label></td>
+					<td><label id="correctAns" class="ch" style="display: none" id="{{res.correctAns}}"><input type="button" value="{{res.correctAns}}"></label></td>
 				</tr>
 				<hr/>
 			</table>
@@ -36,7 +36,7 @@
 		<hr/>
 		<b id="Result"> </b>
 
-		<!-- <script type="text/javascript" src="script.js"></script> -->
+		<script type="text/javascript" src="script.js"></script>
 	
 </div>
 {% endblock %}

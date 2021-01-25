@@ -15,17 +15,30 @@ function getScore() {
 	document.getElementById('Result').innerHTML="";
 	var inp = document.getElementsByTagName("input");
 	if( inp.length > 0)
-		console.log("Successful");
+		console.log("Successful"+inp.length);
 	else
 		console.log("Fail");
-	console.log(inp[0].type);
-	let score = 0, totalQues = 0;
+	// console.log(inp[0].id);
+	let score = 0, totalQues = 0, j=0;
+	let ans="";
 	for(i=0;i<inp.length;i++) {
 		if(inp[i].type == "radio") {
 			totalQues += 1;
 			if(inp[i].checked) {
-				score += 1;
+				ans = inp[i].value;
+				// console.log(ans);
 			}
+		}
+		if(inp[i].type == "button") {
+			console.log(ans);
+			console.log(inp[i].value);
+			if(inp[i].value === ans) {
+				score += 1;
+				inp[i].style.backgroundColor = "green";
+			}
+			else
+				inp[i].style.backgroundColor = "red";
+			inp[i].style.color="white";
 		}
 	}
 	totalQues /= 4;
